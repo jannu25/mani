@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" password="root" database="sairam" doc:name="MySQL Configuration"/>
+	<flow name="for-each-scopeFlow">
+		<file:inbound-endpoint path="lucky" responseTimeout="10000" doc:name="source"/>
+		<dw:transform-message doc:name="Transform Message" metadata:id="63826a9d-23f5-4aa4-90d5-062f6e8ae1e5">
+			<dw:input-payload doc:sample="C:\Users\LENOVO\Desktop\123\sampledata.csv" mimeType="application/csv"/>
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+payload]]></dw:set-payload>
+		</dw:transform-message>
+		<foreach doc:name="For Each">
+			<logger message="inside for each" level="INFO" doc:name="Logger"/>
+			<db:update config-ref="MySQL_Configuration" doc:name="Database">
+				<db:parameterized-query><![CDATA[update voterdata set `name`='laddu256']]></db:parameterized-query>
+			</db:update>
+		</foreach>
+		<logger message="finished printing" level="INFO" doc:name="Logger"/>
+	</flow>
+</mule>
