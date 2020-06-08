@@ -39,3 +39,44 @@
 *   JMX Agent                                                        *
 *   Wrapper Manager                                                  *
 **********************************************************************
+2020-06-08 14:03:20,137 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'radha'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-08 14:03:21,033 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-08 14:03:21,455 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-08 14:03:21,846 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-08 14:03:21,846 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-08 14:03:22,742 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@32057e6: startup date [Mon Jun 08 14:03:22 IST 2020]; root of context hierarchy
+2020-06-08 14:03:25,578 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-08 14:03:29,259 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-08 14:03:30,345 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs E:\mule-it\.mule\.\.mule\radha\queue-tx-log\tx1.log and E:\mule-it\.mule\.\.mule\radha\queue-tx-log\tx2.log
+2020-06-08 14:03:30,376 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs E:\mule-it\.mule\.\.mule\radha\queue-xa-tx-log\tx1.log and E:\mule-it\.mule\.\.mule\radha\queue-xa-tx-log\tx2.log
+2020-06-08 14:03:30,818 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-08 14:03:30,834 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: radhaFlow
+2020-06-08 14:03:30,835 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@10272bbb
+2020-06-08 14:03:31,715 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: radhaFlow.stage1
+2020-06-08 14:03:32,533 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='E:\mule-it\.mule\apps\radha\radha.xml'}]"
+2020-06-08 14:03:32,533 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='E:\mule-it\.mule\apps\radha\radha.xml'}]"
+2020-06-08 14:03:32,543 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-08 14:03:32,551 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'radha'                                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-08 14:03:32,585 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-08 14:03:32,585 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-08 14:03:32,691 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/vishnu
+2020-06-08 14:03:32,704 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-08 14:03:32,709 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: radhaFlow
+2020-06-08 14:03:32,712 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: radhaFlow.stage1
+2020-06-08 14:03:32,836 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-08 14:03:32,928 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: radha                                                 *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
