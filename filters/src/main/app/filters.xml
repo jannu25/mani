@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+	<flow name="filtersFlow">
+		<file:inbound-endpoint path="filefilter In" responseTimeout="10000" doc:name="Source">
+			<file:filename-regex-filter pattern="[a-zA-Z0-9]*.*" caseSensitive="true"/>
+		</file:inbound-endpoint>
+		<idempotent-message-filter idExpression="#[message.inboundProperties.timestamp]" doc:name="Idempotent Message"/>
+		<logger message="till idem flt" level="INFO" doc:name="Logger"/>
+		<wildcard-filter pattern="*idiot*" caseSensitive="true" doc:name="Wildcard"/>
+		<logger message="till wild" level="INFO" doc:name="Logger"/>
+		<file:outbound-endpoint path="filter outbox" responseTimeout="10000" doc:name="Destination"/>
+	</flow>
+</mule>

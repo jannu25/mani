@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:smtp="http://www.mulesoft.org/schema/mule/smtp" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/smtp http://www.mulesoft.org/schema/mule/smtp/current/mule-smtp.xsd">
+	<db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" password="root" database="empsave" doc:name="MySQL Configuration"/>
+	<http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" basePath="flows" doc:name="HTTP Listener Configuration"/>
+	<smtp:gmail-connector name="Gmail" validateConnections="true" doc:name="Gmail"/>
+	<flow name="dbflowFlow">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/renuflow" allowedMethods="GET" doc:name="HTTP"/>
+		<flow-ref name="db-sub-flow1Sub_Flow" doc:name="Flow Reference"/>
+		<smtp:outbound-endpoint host="smtp.gmail.com" port="587" user="renukareddy2607@gmail.com" password="renu0102" connector-ref="Gmail" to="culkid26@gmail.com" from="renukareddy2607@gmail.com" subject="check the mail chinnu" cc="shirishareddy0102@gmail.com" responseTimeout="10000" doc:name="SMTP"/>
+		<set-payload value="mails sent......." doc:name="Set Payload"/>
+		<catch-exception-strategy doc:name="dbflowCatch_Exception_Strategy">
+			<set-payload value="db renudata pls check it" doc:name="Set Payload"/>
+			<smtp:outbound-endpoint host="smtp.gmail.com" port="587" user="renukareddy2607@gmail.com" password="renu0102" connector-ref="Gmail" to="culkid26@gmail.com" from="renukareddy2607@gmail.com" subject="Pls check the mail " cc="shirishareddy0102@gmail.com" responseTimeout="10000" doc:name="SMTP"/>
+		</catch-exception-strategy>
+	</flow>
+</mule>

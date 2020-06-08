@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
+	<flow name="choicechinnuFlow">
+		<file:inbound-endpoint path="inbox" responseTimeout="10000" doc:name="File"/>
+		<choice doc:name="Choice">
+			<when expression="#[message.inboundProperties.originalFilename.endsWith('txt')]">
+				<file:outbound-endpoint responseTimeout="10000" doc:name="txtFile" path="outbox_txt"/>
+				<object-to-byte-array-transformer doc:name="Object to Byte Array"/>
+				<scatter-gather doc:name="Scatter-Gather">
+					<file:outbound-endpoint path="RENU_TXT" responseTimeout="10000" doc:name="ram"/>
+					<file:outbound-endpoint path="Prashanth_Txt" responseTimeout="10000" doc:name="sriram"/>
+					<file:outbound-endpoint path="Siri_txt" responseTimeout="10000" doc:name="jaisriram"/>
+				</scatter-gather>
+			</when>
+			<when expression="#[message.inboundProperties.originalFilename.endsWith('pdf')]">
+				<file:outbound-endpoint responseTimeout="10000" doc:name="PfdFile" path="outbox_pdf"/>
+			</when>
+			<otherwise>
+				<file:outbound-endpoint responseTimeout="10000" doc:name="other_files" path="outbox_Others"/>
+			</otherwise>
+		</choice>
+	</flow>
+</mule>
