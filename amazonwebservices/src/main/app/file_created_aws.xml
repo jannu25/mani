@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:s3="http://www.mulesoft.org/schema/mule/s3" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/s3 http://www.mulesoft.org/schema/mule/s3/current/mule-s3.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+	<file:connector name="File" autoDelete="true" streaming="true" validateConnections="true" doc:name="File"/>
+	<flow name="file_created_awsFlow">
+		<file:inbound-endpoint path="renufiles" connector-ref="File" responseTimeout="10000" doc:name="File"/>
+		<s3:create-object config-ref="Amazon_S3__Basic_Configuration" bucketName="renu2507" key="#[message.inboundProperties.originalFilename]" doc:name="Amazon S3"/>
+		<set-payload value="files sent to aws  path...." doc:name="Set Payload"/>
+	</flow>
+</mule>

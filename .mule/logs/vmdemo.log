@@ -1,0 +1,991 @@
+2020-06-11 01:04:40,522 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'vmdemo'                                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:04:41,436 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-11 01:04:41,751 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-11 01:04:42,097 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-11 01:04:42,098 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-11 01:04:42,917 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1b0a7baf: startup date [Thu Jun 11 01:04:42 IST 2020]; root of context hierarchy
+2020-06-11 01:04:45,807 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-11 01:04:47,751 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-11 01:04:48,468 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs E:\mule-it\.mule\.\.mule\vmdemo\queue-tx-log\tx1.log and E:\mule-it\.mule\.\.mule\vmdemo\queue-tx-log\tx2.log
+2020-06-11 01:04:48,496 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs E:\mule-it\.mule\.\.mule\vmdemo\queue-xa-tx-log\tx1.log and E:\mule-it\.mule\.\.mule\vmdemo\queue-xa-tx-log\tx2.log
+2020-06-11 01:04:48,522 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: VM
+2020-06-11 01:04:48,597 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-11 01:04:49,096 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-11 01:04:49,103 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: vm-consumerFlow
+2020-06-11 01:04:49,104 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1faf386c
+2020-06-11 01:04:49,138 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: vm-consumerFlow.stage1
+2020-06-11 01:04:49,153 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: vmdemoFlow
+2020-06-11 01:04:49,153 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@168b4cb0
+2020-06-11 01:04:49,180 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: vmdemoFlow.stage1
+2020-06-11 01:04:49,610 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vm-consumer.xml'}, ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vmdemo.xml'}]"
+2020-06-11 01:04:49,610 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vm-consumer.xml'}, ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vmdemo.xml'}]"
+2020-06-11 01:04:49,619 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-11 01:04:49,626 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'vmdemo'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:04:49,643 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-11 01:04:49,643 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-11 01:04:49,691 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/vm
+2020-06-11 01:04:49,695 [main] INFO  org.mule.transport.vm.VMConnector - Connected: VMConnector
+{
+  name=VM
+  lifecycle=initialise
+  this=4d0e54e0
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:04:49,695 [main] INFO  org.mule.transport.vm.VMConnector - Starting: VMConnector
+{
+  name=VM
+  lifecycle=initialise
+  this=4d0e54e0
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:04:49,696 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: VM
+2020-06-11 01:04:49,700 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=753fd7a1
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:04:49,700 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=753fd7a1
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:04:49,700 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-11 01:04:49,708 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-11 01:04:49,711 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: vm-consumerFlow
+2020-06-11 01:04:49,712 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: vm-consumerFlow.stage1
+2020-06-11 01:04:49,719 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: vmdemoFlow
+2020-06-11 01:04:49,719 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: vmdemoFlow.stage1
+2020-06-11 01:04:49,767 [main] INFO  org.mule.transport.vm.VMConnector - Registering listener: vm-consumerFlow on endpointUri: vm://q1
+2020-06-11 01:04:49,788 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:04:49,790 [main] INFO  org.mule.transport.vm.VMMessageReceiver - Connecting clusterizable message receiver
+2020-06-11 01:04:49,791 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:04:49,791 [main] INFO  org.mule.transport.vm.VMMessageReceiver - Starting clusterizable message receiver
+2020-06-11 01:04:49,810 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-11 01:04:49,837 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.vmdemo:type=Endpoint,service="vm-consumerFlow",connector=VM,name="endpoint.vm.q1"
+2020-06-11 01:04:49,838 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.vmdemo:type=Endpoint,service="vm-consumerFlow",connector=VM,name="endpoint.vm.q1"
+2020-06-11 01:04:49,839 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.vmdemo:type=Connector,name="connector.file.mule.default"
+2020-06-11 01:04:49,839 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.vmdemo:type=Connector,name="VM"
+2020-06-11 01:04:49,844 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: vmdemo                                                *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-11 01:05:19,887 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'vmdemo'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:05:19,929 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: vm-consumerFlow
+2020-06-11 01:05:19,929 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Removing listener on endpointUri: vm://q1
+2020-06-11 01:05:19,930 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:05:19,982 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:05:19,983 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: vm-consumerFlow.stage1
+2020-06-11 01:05:20,151 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: vmdemoFlow
+2020-06-11 01:05:20,151 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: vmdemoFlow.stage1
+2020-06-11 01:05:20,239 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-11 01:05:20,247 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: VM
+2020-06-11 01:05:20,254 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: connector.file.mule.default
+2020-06-11 01:05:20,390 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081/vm
+2020-06-11 01:05:20,394 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-11 01:05:20,394 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-11 01:05:20,408 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'vmdemo'                                   +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:05:20,410 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-11 01:05:20,414 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: vm-consumerFlow
+2020-06-11 01:05:20,415 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: vm-consumerFlow.stage1
+2020-06-11 01:05:20,418 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: vmdemoFlow
+2020-06-11 01:05:20,419 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: vmdemoFlow.stage1
+2020-06-11 01:05:20,422 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-11 01:05:20,429 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Disconnected: VMConnector
+{
+  name=VM
+  lifecycle=stop
+  this=4d0e54e0
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:05:20,431 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: VM
+2020-06-11 01:05:20,432 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Disconnected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=stop
+  this=753fd7a1
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:05:20,432 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: connector.file.mule.default
+2020-06-11 01:05:20,902 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@1b0a7baf: startup date [Thu Jun 11 01:04:42 IST 2020]; root of context hierarchy
+2020-06-11 01:05:20,911 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "vmdemo" shut down normally on: 11/6/20 1:05 AM        *
+* Up for: 0 days, 0 hours, 0 mins, 31.279 sec                        *
+**********************************************************************
+2020-06-11 01:05:21,289 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'vmdemo'                                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:05:21,319 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-11 01:05:21,334 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-11 01:05:21,388 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-11 01:05:21,388 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-11 01:05:21,399 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@11881e7d: startup date [Thu Jun 11 01:05:21 IST 2020]; root of context hierarchy
+2020-06-11 01:05:22,531 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-11 01:05:22,976 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs E:\mule-it\.mule\.\.mule\vmdemo\queue-tx-log\tx1.log and E:\mule-it\.mule\.\.mule\vmdemo\queue-tx-log\tx2.log
+2020-06-11 01:05:22,981 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs E:\mule-it\.mule\.\.mule\vmdemo\queue-xa-tx-log\tx1.log and E:\mule-it\.mule\.\.mule\vmdemo\queue-xa-tx-log\tx2.log
+2020-06-11 01:05:22,989 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: VM
+2020-06-11 01:05:23,027 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-11 01:05:23,090 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-11 01:05:23,094 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: vm-consumerFlow
+2020-06-11 01:05:23,095 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@23526b99
+2020-06-11 01:05:23,106 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: vm-consumerFlow.stage1
+2020-06-11 01:05:23,107 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: vmdemoFlow
+2020-06-11 01:05:23,108 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4bbadff3
+2020-06-11 01:05:23,123 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: vmdemoFlow.stage1
+2020-06-11 01:05:23,173 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vm-consumer.xml'}, ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vmdemo.xml'}]"
+2020-06-11 01:05:23,174 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vm-consumer.xml'}, ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vmdemo.xml'}]"
+2020-06-11 01:05:23,178 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'vmdemo'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:05:23,187 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-11 01:05:23,189 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-11 01:05:23,221 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/vm
+2020-06-11 01:05:23,224 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Connected: VMConnector
+{
+  name=VM
+  lifecycle=initialise
+  this=59b4dcc6
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:05:23,224 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Starting: VMConnector
+{
+  name=VM
+  lifecycle=initialise
+  this=59b4dcc6
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:05:23,224 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: VM
+2020-06-11 01:05:23,225 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=47e481c5
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:05:23,225 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=47e481c5
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:05:23,225 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-11 01:05:23,239 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-11 01:05:23,242 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: vm-consumerFlow
+2020-06-11 01:05:23,242 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: vm-consumerFlow.stage1
+2020-06-11 01:05:23,254 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: vmdemoFlow
+2020-06-11 01:05:23,254 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: vmdemoFlow.stage1
+2020-06-11 01:05:23,276 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Registering listener: vm-consumerFlow on endpointUri: vm://q1
+2020-06-11 01:05:23,277 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:05:23,277 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMMessageReceiver - Connecting clusterizable message receiver
+2020-06-11 01:05:23,278 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:05:23,278 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMMessageReceiver - Starting clusterizable message receiver
+2020-06-11 01:05:23,289 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-11 01:05:23,301 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.vmdemo:type=Endpoint,service="vm-consumerFlow",connector=VM,name="endpoint.vm.q1"
+2020-06-11 01:05:23,302 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.vmdemo:type=Endpoint,service="vm-consumerFlow",connector=VM,name="endpoint.vm.q1"
+2020-06-11 01:05:23,303 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.vmdemo:type=Connector,name="connector.file.mule.default"
+2020-06-11 01:05:23,304 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.vmdemo:type=Connector,name="VM"
+2020-06-11 01:05:23,306 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: vmdemo                                                *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-11 01:05:31,229 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'VM.dispatcher.1938574341'. Object is: VMMessageDispatcher
+2020-06-11 01:05:31,229 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'VM.dispatcher.1938574341'. Object is: VMMessageDispatcher
+2020-06-11 01:05:31,247 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.api.processor.LoggerMessageProcessor - end of 1st flow...............
+2020-06-11 01:05:31,262 [[vmdemo].VM.receiver.02] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-11 01:05:31,285 [[vmdemo].vm-consumerFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - second flow started,....................
+2020-06-11 01:05:31,318 [[vmdemo].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.1854950766'. Object is: FileMessageDispatcher
+2020-06-11 01:05:31,344 [[vmdemo].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.1854950766'. Object is: FileMessageDispatcher
+2020-06-11 01:05:31,559 [[vmdemo].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: E:\mule-it\vmdemo\msg\20096267053480.json
+2020-06-11 01:07:23,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'vmdemo'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:07:23,382 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: vm-consumerFlow
+2020-06-11 01:07:23,383 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Removing listener on endpointUri: vm://q1
+2020-06-11 01:07:23,383 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:07:23,491 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:07:23,492 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: vm-consumerFlow.stage1
+2020-06-11 01:07:23,644 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: vmdemoFlow
+2020-06-11 01:07:23,644 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: vmdemoFlow.stage1
+2020-06-11 01:07:23,847 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-11 01:07:23,854 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: VM
+2020-06-11 01:07:23,862 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'VM.dispatcher.1938574341'. Object is: VMMessageDispatcher
+2020-06-11 01:07:23,862 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'VM.dispatcher.1938574341'. Object is: VMMessageDispatcher
+2020-06-11 01:07:23,863 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: connector.file.mule.default
+2020-06-11 01:07:23,865 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'connector.file.mule.default.dispatcher.1854950766'. Object is: FileMessageDispatcher
+2020-06-11 01:07:23,866 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'connector.file.mule.default.dispatcher.1854950766'. Object is: FileMessageDispatcher
+2020-06-11 01:07:23,881 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081/vm
+2020-06-11 01:07:23,886 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-11 01:07:23,886 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-11 01:07:23,896 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'vmdemo'                                   +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:07:23,896 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-11 01:07:23,898 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: vm-consumerFlow
+2020-06-11 01:07:23,898 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: vm-consumerFlow.stage1
+2020-06-11 01:07:23,899 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: vmdemoFlow
+2020-06-11 01:07:23,900 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: vmdemoFlow.stage1
+2020-06-11 01:07:23,903 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-11 01:07:23,908 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Disconnected: VMConnector
+{
+  name=VM
+  lifecycle=stop
+  this=59b4dcc6
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:07:23,909 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: VM
+2020-06-11 01:07:23,910 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Disconnected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=stop
+  this=47e481c5
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:07:23,910 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: connector.file.mule.default
+2020-06-11 01:07:23,974 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@11881e7d: startup date [Thu Jun 11 01:05:21 IST 2020]; root of context hierarchy
+2020-06-11 01:07:23,984 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "vmdemo" shut down normally on: 11/6/20 1:07 AM        *
+* Up for: 0 days, 0 hours, 2 mins, 0.804 sec                         *
+**********************************************************************
+2020-06-11 01:07:24,412 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'vmdemo'                                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:07:24,433 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-11 01:07:24,448 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-11 01:07:24,497 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-11 01:07:24,497 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-11 01:07:24,505 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@34f5ef36: startup date [Thu Jun 11 01:07:24 IST 2020]; root of context hierarchy
+2020-06-11 01:07:25,362 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-11 01:07:25,743 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs E:\mule-it\.mule\.\.mule\vmdemo\queue-tx-log\tx1.log and E:\mule-it\.mule\.\.mule\vmdemo\queue-tx-log\tx2.log
+2020-06-11 01:07:25,745 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs E:\mule-it\.mule\.\.mule\vmdemo\queue-xa-tx-log\tx1.log and E:\mule-it\.mule\.\.mule\vmdemo\queue-xa-tx-log\tx2.log
+2020-06-11 01:07:25,749 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: VM
+2020-06-11 01:07:25,790 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-11 01:07:25,840 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-11 01:07:25,843 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: vm-consumerFlow
+2020-06-11 01:07:25,843 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5fee775a
+2020-06-11 01:07:25,855 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: vm-consumerFlow.stage1
+2020-06-11 01:07:25,856 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: vmdemoFlow
+2020-06-11 01:07:25,857 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4a8c7368
+2020-06-11 01:07:25,871 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: vmdemoFlow.stage1
+2020-06-11 01:07:25,938 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vm-consumer.xml'}, ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vmdemo.xml'}]"
+2020-06-11 01:07:25,939 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vm-consumer.xml'}, ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vmdemo.xml'}]"
+2020-06-11 01:07:25,944 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'vmdemo'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:07:25,956 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-11 01:07:25,956 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-11 01:07:26,144 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/vm
+2020-06-11 01:07:26,147 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Connected: VMConnector
+{
+  name=VM
+  lifecycle=initialise
+  this=79d0135e
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:07:26,147 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Starting: VMConnector
+{
+  name=VM
+  lifecycle=initialise
+  this=79d0135e
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:07:26,147 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: VM
+2020-06-11 01:07:26,147 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=4e7d753d
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:07:26,148 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=4e7d753d
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:07:26,148 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-11 01:07:26,154 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-11 01:07:26,157 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: vm-consumerFlow
+2020-06-11 01:07:26,157 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: vm-consumerFlow.stage1
+2020-06-11 01:07:26,164 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: vmdemoFlow
+2020-06-11 01:07:26,164 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: vmdemoFlow.stage1
+2020-06-11 01:07:26,183 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Registering listener: vm-consumerFlow on endpointUri: vm://q1
+2020-06-11 01:07:26,183 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:07:26,184 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMMessageReceiver - Connecting clusterizable message receiver
+2020-06-11 01:07:26,184 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:07:26,184 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMMessageReceiver - Starting clusterizable message receiver
+2020-06-11 01:07:26,191 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-11 01:07:26,202 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.vmdemo:type=Endpoint,service="vm-consumerFlow",connector=VM,name="endpoint.vm.q1"
+2020-06-11 01:07:26,203 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.vmdemo:type=Endpoint,service="vm-consumerFlow",connector=VM,name="endpoint.vm.q1"
+2020-06-11 01:07:26,204 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.vmdemo:type=Connector,name="connector.file.mule.default"
+2020-06-11 01:07:26,204 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.vmdemo:type=Connector,name="VM"
+2020-06-11 01:07:26,217 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: vmdemo                                                *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-11 01:07:35,130 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'VM.dispatcher.743871202'. Object is: VMMessageDispatcher
+2020-06-11 01:07:35,130 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'VM.dispatcher.743871202'. Object is: VMMessageDispatcher
+2020-06-11 01:07:35,138 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.api.processor.LoggerMessageProcessor - end of 1st flow...............
+2020-06-11 01:07:35,153 [[vmdemo].VM.receiver.02] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-11 01:07:35,220 [[vmdemo].vm-consumerFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - second flow started,.................... org.glassfish.grizzly.utils.BufferInputStream@6f5725ef
+2020-06-11 01:07:35,233 [[vmdemo].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.1210678316'. Object is: FileMessageDispatcher
+2020-06-11 01:07:35,243 [[vmdemo].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.1210678316'. Object is: FileMessageDispatcher
+2020-06-11 01:07:35,309 [[vmdemo].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: E:\mule-it\vmdemo\msg\20220112917035.json
+2020-06-11 01:10:01,315 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'vmdemo'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:10:01,317 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: vm-consumerFlow
+2020-06-11 01:10:01,317 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Removing listener on endpointUri: vm://q1
+2020-06-11 01:10:01,318 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:10:01,492 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:10:01,506 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: vm-consumerFlow.stage1
+2020-06-11 01:10:01,638 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: vmdemoFlow
+2020-06-11 01:10:01,638 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: vmdemoFlow.stage1
+2020-06-11 01:10:01,838 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-11 01:10:01,843 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: VM
+2020-06-11 01:10:01,847 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'VM.dispatcher.743871202'. Object is: VMMessageDispatcher
+2020-06-11 01:10:01,847 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'VM.dispatcher.743871202'. Object is: VMMessageDispatcher
+2020-06-11 01:10:01,848 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: connector.file.mule.default
+2020-06-11 01:10:01,849 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'connector.file.mule.default.dispatcher.1210678316'. Object is: FileMessageDispatcher
+2020-06-11 01:10:01,849 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'connector.file.mule.default.dispatcher.1210678316'. Object is: FileMessageDispatcher
+2020-06-11 01:10:01,858 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081/vm
+2020-06-11 01:10:01,863 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-11 01:10:01,864 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-11 01:10:01,875 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'vmdemo'                                   +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:10:01,875 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-11 01:10:01,876 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: vm-consumerFlow
+2020-06-11 01:10:01,876 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: vm-consumerFlow.stage1
+2020-06-11 01:10:01,877 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: vmdemoFlow
+2020-06-11 01:10:01,877 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: vmdemoFlow.stage1
+2020-06-11 01:10:01,879 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-11 01:10:01,885 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Disconnected: VMConnector
+{
+  name=VM
+  lifecycle=stop
+  this=79d0135e
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:10:01,886 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: VM
+2020-06-11 01:10:01,886 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Disconnected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=stop
+  this=4e7d753d
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:10:01,886 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: connector.file.mule.default
+2020-06-11 01:10:01,947 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@34f5ef36: startup date [Thu Jun 11 01:07:24 IST 2020]; root of context hierarchy
+2020-06-11 01:10:02,068 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "vmdemo" shut down normally on: 11/6/20 1:10 AM        *
+* Up for: 0 days, 0 hours, 2 mins, 36.123 sec                        *
+**********************************************************************
+2020-06-11 01:10:02,881 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'vmdemo'                                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:10:02,900 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-11 01:10:02,909 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-11 01:10:02,937 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-11 01:10:02,937 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-11 01:10:02,942 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@78810744: startup date [Thu Jun 11 01:10:02 IST 2020]; root of context hierarchy
+2020-06-11 01:10:03,682 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-11 01:10:04,089 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs E:\mule-it\.mule\.\.mule\vmdemo\queue-tx-log\tx1.log and E:\mule-it\.mule\.\.mule\vmdemo\queue-tx-log\tx2.log
+2020-06-11 01:10:04,090 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs E:\mule-it\.mule\.\.mule\vmdemo\queue-xa-tx-log\tx1.log and E:\mule-it\.mule\.\.mule\vmdemo\queue-xa-tx-log\tx2.log
+2020-06-11 01:10:04,093 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: VM
+2020-06-11 01:10:04,124 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-11 01:10:04,174 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-11 01:10:04,177 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: vm-consumerFlow
+2020-06-11 01:10:04,177 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4a1f632d
+2020-06-11 01:10:04,187 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: vm-consumerFlow.stage1
+2020-06-11 01:10:04,188 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: vmdemoFlow
+2020-06-11 01:10:04,188 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1eaf9b0a
+2020-06-11 01:10:04,199 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: vmdemoFlow.stage1
+2020-06-11 01:10:04,244 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vm-consumer.xml'}, ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vmdemo.xml'}]"
+2020-06-11 01:10:04,244 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vm-consumer.xml'}, ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vmdemo.xml'}]"
+2020-06-11 01:10:04,247 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'vmdemo'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:10:04,253 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-11 01:10:04,253 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-11 01:10:04,282 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/vm
+2020-06-11 01:10:04,286 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Connected: VMConnector
+{
+  name=VM
+  lifecycle=initialise
+  this=26187890
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:10:04,287 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Starting: VMConnector
+{
+  name=VM
+  lifecycle=initialise
+  this=26187890
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:10:04,289 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: VM
+2020-06-11 01:10:04,290 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=1f5a0155
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:10:04,290 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=1f5a0155
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:10:04,290 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-11 01:10:04,300 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-11 01:10:04,304 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: vm-consumerFlow
+2020-06-11 01:10:04,304 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: vm-consumerFlow.stage1
+2020-06-11 01:10:04,316 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: vmdemoFlow
+2020-06-11 01:10:04,316 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: vmdemoFlow.stage1
+2020-06-11 01:10:04,338 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Registering listener: vm-consumerFlow on endpointUri: vm://q1
+2020-06-11 01:10:04,339 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:10:04,339 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMMessageReceiver - Connecting clusterizable message receiver
+2020-06-11 01:10:04,339 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:10:04,339 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMMessageReceiver - Starting clusterizable message receiver
+2020-06-11 01:10:04,344 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-11 01:10:04,355 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.vmdemo:type=Endpoint,service="vm-consumerFlow",connector=VM,name="endpoint.vm.q1"
+2020-06-11 01:10:04,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.vmdemo:type=Endpoint,service="vm-consumerFlow",connector=VM,name="endpoint.vm.q1"
+2020-06-11 01:10:04,358 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.vmdemo:type=Connector,name="connector.file.mule.default"
+2020-06-11 01:10:04,359 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.vmdemo:type=Connector,name="VM"
+2020-06-11 01:10:04,362 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: vmdemo                                                *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-11 01:10:24,533 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'VM.dispatcher.2046941933'. Object is: VMMessageDispatcher
+2020-06-11 01:10:24,533 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'VM.dispatcher.2046941933'. Object is: VMMessageDispatcher
+2020-06-11 01:10:24,538 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.api.processor.LoggerMessageProcessor - end of 1st flow...............
+2020-06-11 01:10:24,573 [[vmdemo].VM.receiver.02] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-11 01:10:24,999 [[vmdemo].vm-consumerFlow.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : No serializer found for class org.glassfish.grizzly.utils.BufferInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationConfig.Feature.FAIL_ON_EMPTY_BEANS) ) (org.codehaus.jackson.map.JsonMappingException)
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@f619f3d
+Transformer           : ObjectToJson{this=57bf72d5, name='ObjectToString', ignoreBadInput=false, returnClass=SimpleDataType{type=java.lang.String, mimeType='application/json', encoding='null'}, sourceTypes=[]}
+Element               : /vm-consumerFlow/processors/0 @ vmdemo:vm-consumer.xml:13 (Object to JSON)
+Element XML           : <json:object-to-json-transformer doc:name="Object to JSON"></json:object-to-json-transformer>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.codehaus.jackson.map.JsonMappingException: No serializer found for class org.glassfish.grizzly.utils.BufferInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationConfig.Feature.FAIL_ON_EMPTY_BEANS) )
+	at org.codehaus.jackson.map.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:52)
+	at org.codehaus.jackson.map.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:25)
+	at org.codehaus.jackson.map.ser.StdSerializerProvider._serializeValue(StdSerializerProvider.java:610)
+	at org.codehaus.jackson.map.ser.StdSerializerProvider.serializeValue(StdSerializerProvider.java:256)
+	at org.codehaus.jackson.map.ObjectMapper._configAndWriteValue(ObjectMapper.java:2575)
+	at org.codehaus.jackson.map.ObjectMapper.writeValue(ObjectMapper.java:2081)
+	at org.mule.module.json.transformers.ObjectToJson.transformMessage(ObjectToJson.java:99)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:141)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:89)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1643)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1546)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1520)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1512)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:114)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:140)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:230)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:223)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:222)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+********************************************************************************
+
+2020-06-11 01:11:39,488 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'vmdemo'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:11:39,490 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: vm-consumerFlow
+2020-06-11 01:11:39,490 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Removing listener on endpointUri: vm://q1
+2020-06-11 01:11:39,490 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:11:39,540 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:11:39,540 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: vm-consumerFlow.stage1
+2020-06-11 01:11:39,697 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: vmdemoFlow
+2020-06-11 01:11:39,697 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: vmdemoFlow.stage1
+2020-06-11 01:11:39,899 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-11 01:11:39,903 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: VM
+2020-06-11 01:11:39,907 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'VM.dispatcher.2046941933'. Object is: VMMessageDispatcher
+2020-06-11 01:11:39,907 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'VM.dispatcher.2046941933'. Object is: VMMessageDispatcher
+2020-06-11 01:11:39,907 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: connector.file.mule.default
+2020-06-11 01:11:39,915 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081/vm
+2020-06-11 01:11:39,917 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-11 01:11:39,917 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-11 01:11:39,922 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'vmdemo'                                   +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:11:39,923 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-11 01:11:39,924 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: vm-consumerFlow
+2020-06-11 01:11:39,924 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: vm-consumerFlow.stage1
+2020-06-11 01:11:39,924 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: vmdemoFlow
+2020-06-11 01:11:39,924 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: vmdemoFlow.stage1
+2020-06-11 01:11:39,928 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-11 01:11:39,933 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Disconnected: VMConnector
+{
+  name=VM
+  lifecycle=stop
+  this=26187890
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:11:39,934 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: VM
+2020-06-11 01:11:39,934 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Disconnected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=stop
+  this=1f5a0155
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:11:39,934 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: connector.file.mule.default
+2020-06-11 01:11:39,984 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@78810744: startup date [Thu Jun 11 01:10:02 IST 2020]; root of context hierarchy
+2020-06-11 01:11:40,023 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "vmdemo" shut down normally on: 11/6/20 1:11 AM        *
+* Up for: 0 days, 0 hours, 1 mins, 35.776 sec                        *
+**********************************************************************
+2020-06-11 01:11:40,286 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'vmdemo'                                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:11:40,305 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-11 01:11:40,316 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-11 01:11:40,351 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-11 01:11:40,351 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-11 01:11:40,358 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@6c43f912: startup date [Thu Jun 11 01:11:40 IST 2020]; root of context hierarchy
+2020-06-11 01:11:42,986 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-11 01:11:43,344 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs E:\mule-it\.mule\.\.mule\vmdemo\queue-tx-log\tx1.log and E:\mule-it\.mule\.\.mule\vmdemo\queue-tx-log\tx2.log
+2020-06-11 01:11:43,348 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs E:\mule-it\.mule\.\.mule\vmdemo\queue-xa-tx-log\tx1.log and E:\mule-it\.mule\.\.mule\vmdemo\queue-xa-tx-log\tx2.log
+2020-06-11 01:11:43,352 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: VM
+2020-06-11 01:11:43,382 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-11 01:11:43,432 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-11 01:11:43,435 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: vm-consumerFlow
+2020-06-11 01:11:43,435 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@65b3fde3
+2020-06-11 01:11:43,442 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: vm-consumerFlow.stage1
+2020-06-11 01:11:43,443 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: vmdemoFlow
+2020-06-11 01:11:43,443 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@6f8eceb5
+2020-06-11 01:11:43,452 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: vmdemoFlow.stage1
+2020-06-11 01:11:43,492 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vm-consumer.xml'}, ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vmdemo.xml'}]"
+2020-06-11 01:11:43,493 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vm-consumer.xml'}, ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vmdemo.xml'}]"
+2020-06-11 01:11:43,495 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'vmdemo'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:11:43,501 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-11 01:11:43,501 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-11 01:11:43,521 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/vm
+2020-06-11 01:11:43,524 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Connected: VMConnector
+{
+  name=VM
+  lifecycle=initialise
+  this=d517666
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:11:43,524 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Starting: VMConnector
+{
+  name=VM
+  lifecycle=initialise
+  this=d517666
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:11:43,524 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: VM
+2020-06-11 01:11:43,524 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=269ff6eb
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:11:43,524 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=269ff6eb
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:11:43,524 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-11 01:11:43,533 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-11 01:11:43,534 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: vm-consumerFlow
+2020-06-11 01:11:43,534 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: vm-consumerFlow.stage1
+2020-06-11 01:11:43,539 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: vmdemoFlow
+2020-06-11 01:11:43,539 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: vmdemoFlow.stage1
+2020-06-11 01:11:43,555 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMConnector - Registering listener: vm-consumerFlow on endpointUri: vm://q1
+2020-06-11 01:11:43,557 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:11:43,558 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMMessageReceiver - Connecting clusterizable message receiver
+2020-06-11 01:11:43,558 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:11:43,558 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.vm.VMMessageReceiver - Starting clusterizable message receiver
+2020-06-11 01:11:43,568 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-11 01:11:43,577 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.vmdemo:type=Endpoint,service="vm-consumerFlow",connector=VM,name="endpoint.vm.q1"
+2020-06-11 01:11:43,584 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.vmdemo:type=Endpoint,service="vm-consumerFlow",connector=VM,name="endpoint.vm.q1"
+2020-06-11 01:11:43,585 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.vmdemo:type=Connector,name="connector.file.mule.default"
+2020-06-11 01:11:43,585 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.vmdemo:type=Connector,name="VM"
+2020-06-11 01:11:43,588 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: vmdemo                                                *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-11 01:12:00,408 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'VM.dispatcher.161938400'. Object is: VMMessageDispatcher
+2020-06-11 01:12:00,408 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'VM.dispatcher.161938400'. Object is: VMMessageDispatcher
+2020-06-11 01:12:00,410 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.api.processor.LoggerMessageProcessor - end of 1st flow...............
+2020-06-11 01:12:00,416 [[vmdemo].VM.receiver.02] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-11 01:12:00,536 [[vmdemo].vm-consumerFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - second flow started,.................... 
+2020-06-11 01:12:00,558 [[vmdemo].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.2094291775'. Object is: FileMessageDispatcher
+2020-06-11 01:12:00,564 [[vmdemo].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.2094291775'. Object is: FileMessageDispatcher
+2020-06-11 01:12:00,589 [[vmdemo].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: E:\mule-it\vmdemo\msg\20485435282474.json
+2020-06-11 01:12:57,159 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'vmdemo'                                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:12:58,007 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-11 01:12:58,304 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-11 01:12:58,665 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-11 01:12:58,665 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-11 01:12:59,380 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1b0a7baf: startup date [Thu Jun 11 01:12:59 IST 2020]; root of context hierarchy
+2020-06-11 01:13:02,004 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-11 01:13:03,975 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-11 01:13:04,622 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs E:\mule-it\.mule\.\.mule\vmdemo\queue-tx-log\tx1.log and E:\mule-it\.mule\.\.mule\vmdemo\queue-tx-log\tx2.log
+2020-06-11 01:13:04,659 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs E:\mule-it\.mule\.\.mule\vmdemo\queue-xa-tx-log\tx1.log and E:\mule-it\.mule\.\.mule\vmdemo\queue-xa-tx-log\tx2.log
+2020-06-11 01:13:04,670 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: VM
+2020-06-11 01:13:04,738 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-11 01:13:05,163 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-11 01:13:05,170 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: vm-consumerFlow
+2020-06-11 01:13:05,170 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@cedee22
+2020-06-11 01:13:05,214 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: vm-consumerFlow.stage1
+2020-06-11 01:13:05,234 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: vmdemoFlow
+2020-06-11 01:13:05,234 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@2703d91
+2020-06-11 01:13:05,263 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: vmdemoFlow.stage1
+2020-06-11 01:13:05,645 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vm-consumer.xml'}, ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vmdemo.xml'}]"
+2020-06-11 01:13:05,645 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vm-consumer.xml'}, ConfigResource{resourceName='E:\mule-it\.mule\apps\vmdemo\vmdemo.xml'}]"
+2020-06-11 01:13:05,652 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-11 01:13:05,656 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'vmdemo'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 01:13:05,681 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-11 01:13:05,681 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-11 01:13:05,723 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/vm
+2020-06-11 01:13:05,727 [main] INFO  org.mule.transport.vm.VMConnector - Connected: VMConnector
+{
+  name=VM
+  lifecycle=initialise
+  this=4a481728
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:13:05,727 [main] INFO  org.mule.transport.vm.VMConnector - Starting: VMConnector
+{
+  name=VM
+  lifecycle=initialise
+  this=4a481728
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[vm]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:13:05,728 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: VM
+2020-06-11 01:13:05,730 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=3ba0ae41
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:13:05,730 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=3ba0ae41
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 01:13:05,730 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-11 01:13:05,738 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-11 01:13:05,741 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: vm-consumerFlow
+2020-06-11 01:13:05,741 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: vm-consumerFlow.stage1
+2020-06-11 01:13:05,747 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: vmdemoFlow
+2020-06-11 01:13:05,747 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: vmdemoFlow.stage1
+2020-06-11 01:13:05,785 [main] INFO  org.mule.transport.vm.VMConnector - Registering listener: vm-consumerFlow on endpointUri: vm://q1
+2020-06-11 01:13:05,804 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:13:05,805 [main] INFO  org.mule.transport.vm.VMMessageReceiver - Connecting clusterizable message receiver
+2020-06-11 01:13:05,806 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: VMMessageReceiver
+2020-06-11 01:13:05,806 [main] INFO  org.mule.transport.vm.VMMessageReceiver - Starting clusterizable message receiver
+2020-06-11 01:13:05,821 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-11 01:13:05,852 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.vmdemo:type=Endpoint,service="vm-consumerFlow",connector=VM,name="endpoint.vm.q1"
+2020-06-11 01:13:05,852 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.vmdemo:type=Endpoint,service="vm-consumerFlow",connector=VM,name="endpoint.vm.q1"
+2020-06-11 01:13:05,854 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.vmdemo:type=Connector,name="connector.file.mule.default"
+2020-06-11 01:13:05,854 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.vmdemo:type=Connector,name="VM"
+2020-06-11 01:13:05,859 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: vmdemo                                                *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-11 01:13:23,899 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'VM.dispatcher.78775060'. Object is: VMMessageDispatcher
+2020-06-11 01:13:23,900 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'VM.dispatcher.78775060'. Object is: VMMessageDispatcher
+2020-06-11 01:13:23,949 [[vmdemo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.api.processor.LoggerMessageProcessor - end of 1st flow...............
+2020-06-11 01:13:23,950 [[vmdemo].VM.receiver.02] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-11 01:13:24,016 [[vmdemo].vm-consumerFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - second flow started,.................... [
+{
+"name":"kavitha",
+"gender":"female"
+},
+{
+"name":"kavitha",
+"gender":"female"
+},
+{
+"name":"kavitha",
+"gender":"female"
+}
+]
+2020-06-11 01:13:24,072 [[vmdemo].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.1516618748'. Object is: FileMessageDispatcher
+2020-06-11 01:13:24,110 [[vmdemo].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.1516618748'. Object is: FileMessageDispatcher
+2020-06-11 01:13:24,165 [[vmdemo].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: E:\mule-it\vmdemo\msg\20568995031306.json
